@@ -1,0 +1,17 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "DynamicMarket economy mod behavior pack",
+        "name": "DynamicMarket",
+        "uuid": "004f25f1-cb63-42d0-9416-a60cde9ef71f",
+        "version": [0, 0, 1]
+    },
+    "modules": [
+        {
+            "description": "DynamicMarket economy mod behavior pack",
+            "type": "data",
+            "uuid": "8147d288-8b99-426e-99b0-d8061e65c6f7",
+            "version": [0, 0, 1]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "DynamicMarket economy mod resource pack",
+        "name": "DynamicMarket",
+        "uuid": "b5fd09ae-607b-4074-994f-54aa710f4d48",
+        "version": [0, 0, 1]
+    },
+    "modules": [
+        {
+            "description": "DynamicMarket economy mod resource pack",
+            "type": "resources",
+            "uuid": "36e4dda5-105f-4eca-9914-02c766f29e56",
+            "version": [0, 0, 1]
+        }
+    ]
+}
