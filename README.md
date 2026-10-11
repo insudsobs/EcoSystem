@@ -40,6 +40,7 @@
 - `market_view.py / quote_view.py / order_view.py`：UI 数据合同。
 - `error_code.py`：统一错误码。
 - `runtime_mode.py / production_readiness.py`：运行模式与生产就绪门禁。
+- `nation.py / territory.py`：国家实体与领土版图（chunk 坐标 + ASCII 版图显示），国库账户 `nation:<id>`。
 
 ## 运行测试（Mac）
 

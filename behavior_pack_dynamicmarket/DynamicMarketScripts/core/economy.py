@@ -21,6 +21,7 @@ from fee import FeeAccumulator
 from history import History
 from quote_store import QuoteStore
 from trade_service import TradeService
+from nation import NationRegistry
 import item_registry
 
 # 国库账户（初始货币注入/后续国家税收用）
@@ -56,6 +57,7 @@ class Economy(object):
         self.claim_store = ClaimStore(self.claim_ids)
         self.history = History(_cfg.HISTORY_PERIOD_SECONDS)
         self.quote_store = QuoteStore()
+        self.nation_registry = NationRegistry()
 
         self.trade = TradeService(
             self.market, self.orderbook, self.escrow, self.claim_store,
@@ -127,6 +129,7 @@ class Economy(object):
             "fees": self.fee_acc.snapshot(),
             "fills": self.fill_ledger.snapshot(),
             "history": self.history.snapshot(),
+            "nations": self.nation_registry.snapshot(),
             "inventory": self.inventory.snapshot(),
             "nextIds": {
                 "order": self.order_ids.current(),
@@ -177,6 +180,7 @@ class Economy(object):
             self.history = History(_cfg.HISTORY_PERIOD_SECONDS)
             self.history.rebuild_from(self.fill_ledger.all())
         self.inventory = MemoryInventory.from_snapshot(data["inventory"])
+        self.nation_registry = NationRegistry.from_snapshot(data.get("nations", []))
 
         next_ids = data["nextIds"]
         self.order_ids.ensure_above(next_ids["order"] - 1)

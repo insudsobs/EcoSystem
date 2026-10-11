@@ -16,6 +16,7 @@
 | fee accumulator | `fees` | 手续费余数（按 seller） |
 | fills | `fills` | 成交事实 |
 | item config version | `market.stock[*].configVersion` | 商品配置版本 |
+| nations | `nations` | 国家（领土/首都/税率/国库账户） |
 
 ## DERIVED（派生状态，可从 AUTHORITATIVE 重建）
 
